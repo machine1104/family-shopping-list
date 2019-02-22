@@ -1,0 +1,27 @@
+<div class="nes-container with-title is-dark">
+  <label class="title"> New</label>
+  <form (ngSubmit)="onSubmit()">
+    <div class="nes-field is-inline">
+      <label for="name">Name</label>
+      <input type="text" id="name" class="nes-input" [(ngModel)]="item.name" name="name">
+    </div>
+    <br>
+    <div class="nes-field is-inline">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" class="nes-input" [(ngModel)]="item.amount" name="amount">
+    </div>
+    <br>
+    <div class="nes-field is-inline">
+      <label>Priority</label>
+      <div class="nes-select" >
+        <select required [(ngModel)]="item.priority" name="item.priority">
+          <option value=1 selected >Low</option>
+          <option value=2>Medium</option>
+          <option value=3>High</option>
+        </select>
+      </div>        
+    </div>
+    <br>
+    <input type="submit" value="Add" class="nes-btn is-primary">
+  </form>  
+</div>

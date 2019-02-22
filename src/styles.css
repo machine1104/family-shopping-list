@@ -1,0 +1,15 @@
+body, html,p,div {
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+#items{
+    margin: 0 auto;
+}
+
+table{
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 500px;
+}

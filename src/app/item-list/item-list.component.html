@@ -1,0 +1,20 @@
+<table id="items" class="nes-table is-bordered is-dark">
+    <thead>
+        <tr>
+          <th>Item</th>
+          <th>#</th>
+          <th>Lv.</th>
+          <th></th>
+        </tr>
+      </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td id="name">{{item.name}}</td>
+      <td>x{{item.amount}}</td>
+      <td *ngIf="item.priority == 1"><span class="nes-text is-success">Low</span></td>
+      <td *ngIf="item.priority == 2"><span class="nes-text is-warning">Medium</span></td>
+      <td *ngIf="item.priority == 3"><span class="nes-text is-error">High</span></td>
+      <td><button (click)="deleteItem(item)" class="nes-btn is-success"></button></td>         
+    </tr>
+  </tbody>
+</table>
