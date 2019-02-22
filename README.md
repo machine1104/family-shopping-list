@@ -3,4 +3,6 @@
 Shared shopping list with family members.
 
 ## Usage 
-```npm install```
+```
+npm install
+```
