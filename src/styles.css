@@ -1,7 +1,7 @@
-body, html,p,div {
+body, html,p,div,button {
     margin: auto;
     width: 100%;
-    max-width: 500px;
+
     text-align: center;
 }
 #items{
@@ -10,6 +10,5 @@ body, html,p,div {
 
 table{
     margin: 0 auto;
-    max-width: 500px;
-    min-width: 500px;
+    min-width: 100%;
 }

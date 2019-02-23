@@ -58,6 +58,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "disableHostCheck": true,
             "browserTarget": "family-shopping-list:build"
           },
           "configurations": {
