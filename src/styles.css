@@ -1,14 +1,15 @@
 body, html,p,div,button {
     margin: auto;
+    width: 99%;
+}
+#items {
+    
+    border-collapse: collapse;
     width: 100%;
-
-    text-align: center;
-}
-#items{
-    margin: 0 auto;
-}
-
-table{
-    margin: 0 auto;
-    min-width: 100%;
+  }
+  
+#items td, #items th {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border: 1px solid #ddd;
+padding: 8px;
 }
