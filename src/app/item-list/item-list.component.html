@@ -1,15 +1,25 @@
-<div (dblclick)="deleteItem(item)" class="nes-container is-dark" *ngFor="let item of items">
-    <h2>{{item.name}}</h2>
-    <table >
-        <tbody>
-            <tr>
-              <td width="50%">Amount x{{item.amount}}</td>
-              <td width="50%" *ngIf="item.priority == 1">Priority <span class="nes-text is-success">Low</span></td>
-              <td width="50%" *ngIf="item.priority == 2">Priority <span class="nes-text is-warning">Medium</span></td>
-              <td width="50%" *ngIf="item.priority == 3">Priority <span class="nes-text is-error">High</span></td>         
-            </tr>
-          </tbody>
-    </table>
-    <button (swipe)="deleteItem(item)" class="nes-btn is-success">Done ✓</button>
-    
+<div class="nes-container is-dark" *ngFor="let item of items">
+  <h2>{{item.name}}</h2>
+  <table >
+      <tbody>
+          <tr>
+            <td width="50%">Amount x{{item.amount}}</td>
+            <td width="50%" *ngIf="item.priority == 1">Priority <span class="nes-text is-success">Low</span></td>
+            <td width="50%" *ngIf="item.priority == 2">Priority <span class="nes-text is-warning">Medium</span></td>
+            <td width="50%" *ngIf="item.priority == 3">Priority <span class="nes-text is-error">High</span></td>         
+          </tr>
+        </tbody>
+  </table>
+  <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-default').showModal();">Open dialog</button>
+    <dialog class="nes-dialog" id="dialog-default">
+      <form method="dialog">
+        <p class="title">Dialog</p>
+        <p>Alert: this is a dialog.</p>
+        <menu class="dialog-menu">
+          <button (click) ="dialog-default.close()" class="nes-btn">Cancel</button>
+          <button class="nes-btn is-primary">Confirm</button>
+        </menu>
+      </form>
+    </dialog>
+  <button (swipe)="deleteItem2(item)" class="nes-btn is-success">Done ✓</button>
 </div>
