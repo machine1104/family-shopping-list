@@ -41,4 +41,4 @@ export const environment = {
 
 ```
 
-Replace `"xxxxxxxx"` with your secrets found on Firebase (Create project -> Development -> Authentication -> Web development)
+Replace `"xxxxxxxx"` with your secrets found on Firebase (Create project -> Development -> Authentication -> Web configuration)
