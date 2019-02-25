@@ -1,16 +1,17 @@
-<table id="items"  class="nes-container is-dark">
-    <tr>
-      <th>Item</th>
-      <th>Amount</th>
-      <th>Priority</th>
-      <th></th>
-    </tr>
-  <tr *ngFor="let item of items">
-    <th>{{item.name}}</th>
-    <th>x{{item.amount}}</th>
-    <td width="50%" *ngIf="item.priority == 1"><span class="nes-text is-success">Low</span></td>
-    <td width="50%" *ngIf="item.priority == 2"><span class="nes-text is-warning">Medium</span></td>
-    <td width="50%" *ngIf="item.priority == 3"><span class="nes-text is-error">High</span></td>
-    <th><button (click)="deleteItem(item)" class="nes-btn is-success">✓</button></th>
-  </tr>
-</table>
+<mat-card>
+  <div id="wrapper">
+    <table id="items" >
+        <tr>
+          <th></th>
+          <th>Amount</th>
+          <th>Item</th>
+        </tr>
+      <tr *ngFor="let item of items" 
+      [ngClass]="{'low' : item.priority == 1,'medium' : item.priority == 2,'high' : item.priority == 3}">
+        <th><button class="primary-btn" mat-raised-button (click)="openDialog(item)" >✓</button></th>
+        <th>x{{item.amount}}</th>
+        <th>{{item.name}}</th>
+      </tr>
+    </table>
+  </div>
+</mat-card>

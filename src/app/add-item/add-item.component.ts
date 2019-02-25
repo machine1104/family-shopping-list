@@ -18,7 +18,7 @@ export class AddItemComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.item.name != ""){
+    if(this.item.name != "" && this.item.amount != 0){
       this.itemService.addItem(this.item);
       this.item.name = "";
       this.item.amount = 1;

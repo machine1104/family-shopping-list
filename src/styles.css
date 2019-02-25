@@ -1,15 +1,39 @@
-body, html,p,div,button {
-    margin: auto;
-    width: 99%;
-}
 #items {
-    
     border-collapse: collapse;
-    width: 100%;
+    display: inline-block;
+    
   }
   
 #items td, #items th {
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 border: 1px solid #ddd;
-padding: 8px;
+padding: 5px;
+
+}
+
+html, body { height: 100%; }
+body { margin: auto; font-family: Roboto, "Helvetica Neue", sans-serif; width: 99%; }
+
+#wrapper {
+  text-align: center;
+  width: 100%;
+}
+.low {
+  background-color: #66bb6a
+}
+
+.medium {
+  background-color: #ffca28
+}
+
+.high {
+  background-color: #ef5350
+}
+
+.primary-btn{
+  background-color: #42a5f5;
+  color: white
+}
+.no-btn{
+  background-color: #ef5350;
+  color: white
 }
