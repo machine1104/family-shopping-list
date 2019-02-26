@@ -15,10 +15,8 @@
     
     <mat-form-field>
       <mat-card-title>Priority</mat-card-title>
-      <mat-select value="1" [(ngModel)]="item.priority" name="item.priority">
-        <mat-option value=1>Low</mat-option>
-        <mat-option value=2>Medium</mat-option>
-        <mat-option value=3>High</mat-option>
+      <mat-select  [(ngModel)]="item.priority" name="item.priority" >
+        <mat-option  *ngFor="let priority of priorities"  [value]="priority.value">{{priority.viewValue}}</mat-option>
       </mat-select>
     </mat-form-field>
     <br>

@@ -7,11 +7,20 @@ import { Item } from '../models/Item';
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
+  priorities = [
+    {value: 1, viewValue: 'Low'},
+    {value: 2, viewValue: 'Medium'},
+    {value: 3, viewValue: 'High'}]
+
   item: Item = {
     name: "",
     amount: 1,
-    priority: 1
+    priority: this.priorities[0].value
   }
+
+  
+
+
   constructor(private itemService:ItemService) { }
 
   ngOnInit() {
